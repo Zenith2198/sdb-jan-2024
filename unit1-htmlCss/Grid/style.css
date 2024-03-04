@@ -1,0 +1,68 @@
+body {
+	overflow-x: hidden;
+	margin: 0;
+}
+
+header {
+	background-color: lightskyblue;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: sticky;
+	top: 0;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.content {
+	margin: 10px;
+}
+
+.sidebar {
+	margin: 10px;
+}
+
+.article {
+	margin-bottom: 25px;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	flex-grow: 1;
+}
+
+#icon {
+	height: 50px;
+	width: auto;
+}
+
+.title {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.links > a {
+	text-decoration: none;
+	color: black;
+	border: 1px solid gray;
+	
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+	flex-grow: 1;
+	height: 100%;
+}
+
+.links > a:hover {
+	background-color: skyblue;
+}

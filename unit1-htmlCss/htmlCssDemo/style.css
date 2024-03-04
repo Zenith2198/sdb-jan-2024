@@ -1,0 +1,11 @@
+footer {
+	background-color: red;
+}
+
+header {
+	border-style: solid;
+}
+
+a:hover {
+	background-color: red;
+}

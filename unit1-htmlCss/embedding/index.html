@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Embedding Media</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div>
+		<h1>Xada was here, too!</h1>
+		<h1>Embedding Images</h1>
+		<img src="https://placekitten.com/200/300" alt="Kitten">
+		<svg height="210" width="500">
+			<polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:blue;stroke:purple;stroke-width:10;fill-rule:nonzero;"/>
+			Sorry, your browser does not support inline SVG.
+		</svg>
+	</div>
+
+	<!-- div for demonstrating how to embed iframes in 3 different ways -->
+	<div>
+		<h1>Embedding IFrames</h1>
+		<h1>Xada Change #2</h1>
+		<!-- embedding a map in an iframe -->
+		<iframe 
+			id="inlineFrameExample"
+			title="Inline Frame Example"
+			width="300"
+			height="200"
+			src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+		</iframe>
+		<!-- embedding a youtube video -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/PMWnuOt2vUA?si=PKNED73E3AHMy_zz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+		</iframe>
+		<!-- embedding a website (does not work with google!) -->
+		<iframe src="https://www.google.com/" frameborder="0"></iframe>
+	</div>
+
+	<div>
+		<h1>Embedding Videos</h1>
+		<video controls>
+			<source src="Escape From Tarkov 2024.01.16 - 01.20.41.11.DVR.mp4" type="video/webm">
+		</video>
+	</div>
+</body>
+</html>

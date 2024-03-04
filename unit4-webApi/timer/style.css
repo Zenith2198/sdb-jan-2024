@@ -1,0 +1,36 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid black;
+	border-radius: 15%;
+	padding: 15px;
+	background-color: gainsboro;
+}
+
+.buttonLink {
+	text-decoration: none;
+	display: block;
+}
+
+button {
+	margin: 3px;
+	width: fit-content;
+}
+
+#countdownDisplay {
+	opacity: 0;
+	user-select: none;
+}
