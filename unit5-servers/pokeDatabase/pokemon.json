@@ -1,191 +1,202 @@
 [
-	{
-		"name": "bulbasaur",
-		"height": 7,
-		"id": 1,
-		"types": [
-			"grass",
-			"poison"
-		],
-		"weight": 69
-	},
-	{
-		"name": "ivysaur",
-		"height": 10,
-		"id": 2,
-		"types": [
-			"grass",
-			"poison"
-		],
-		"weight": 130
-	},
-	{
-		"name": "venusaur",
-		"height": 20,
-		"id": 3,
-		"types": [
-			"grass",
-			"poison"
-		],
-		"weight": 1000
-	},
-	{
-		"name": "charmander",
-		"height": 6,
-		"id": 4,
-		"types": [
-			"fire"
-		],
-		"weight": 85
-	},
-	{
-		"name": "charmeleon",
-		"height": 11,
-		"id": 5,
-		"types": [
-			"fire"
-		],
-		"weight": 190
-	},
-	{
-		"name": "charizard",
-		"height": 17,
-		"id": 6,
-		"types": [
-			"fire",
-			"flying"
-		],
-		"weight": 905
-	},
-	{
-		"name": "squirtle",
-		"height": 5,
-		"id": 7,
-		"types": [
-			"water"
-		],
-		"weight": 90
-	},
-	{
-		"name": "wartortle",
-		"height": 10,
-		"id": 8,
-		"types": [
-			"water"
-		],
-		"weight": 225
-	},
-	{
-		"name": "blastoise",
-		"height": 16,
-		"id": 9,
-		"types": [
-			"water"
-		],
-		"weight": 855
-	},
-	{
-		"name": "caterpie",
-		"height": 3,
-		"id": 10,
-		"types": [
-			"bug"
-		],
-		"weight": 29
-	},
-	{
-		"name": "metapod",
-		"height": 7,
-		"id": 11,
-		"types": [
-			"bug"
-		],
-		"weight": 99
-	},
-	{
-		"name": "butterfree",
-		"height": 11,
-		"id": 12,
-		"types": [
-			"bug",
-			"flying"
-		],
-		"weight": 320
-	},
-	{
-		"name": "weedle",
-		"height": 3,
-		"id": 13,
-		"types": [
-			"bug",
-			"poison"
-		],
-		"weight": 32
-	},
-	{
-		"name": "kakuna",
-		"height": 6,
-		"id": 14,
-		"types": [
-			"bug",
-			"poison"
-		],
-		"weight": 100
-	},
-	{
-		"name": "beedrill",
-		"height": 10,
-		"id": 15,
-		"types": [
-			"bug",
-			"poison"
-		],
-		"weight": 295
-	},
-	{
-		"name": "pidgey",
-		"height": 3,
-		"id": 16,
-		"types": [
-			"normal",
-			"flying"
-		],
-		"weight": 18
-	},
-	{
-		"name": "pidgeotto",
-		"height": 11,
-		"id": 17,
-		"types": [
-			"normal",
-			"flying"
-		],
-		"weight": 300
-	},
-	{
-		"name": "pidgeot",
-		"height": 15,
-		"id": 18,
-		"types": [
-			"normal",
-			"flying"
-		],
-		"weight": 395
-	},
-	{
-		"name": "rattata",
-		"height": 3,
-		"id": 19,
-		"types": [
-			"normal"
-		],
-		"weight": 35
-	},
-	{
-		"name": "raticate",
-		"height": 7,
-		"id": 20,
-		"types": [ "normal" ],
-		"weight": 185
-	}
+    {
+        "name": "bulbasaur",
+        "height": 7,
+        "id": 1,
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "weight": 69
+    },
+    {
+        "name": "ivysaur",
+        "height": 10,
+        "id": 2,
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "weight": 130
+    },
+    {
+        "name": "venusaur",
+        "height": 20,
+        "id": 3,
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "weight": 1000
+    },
+    {
+        "name": "charmander",
+        "height": 6,
+        "id": 4,
+        "types": [
+            "fire"
+        ],
+        "weight": 85
+    },
+    {
+        "name": "charmeleon",
+        "height": 11,
+        "id": 5,
+        "types": [
+            "fire"
+        ],
+        "weight": 190
+    },
+    {
+        "name": "charizard",
+        "height": 17,
+        "id": 6,
+        "types": [
+            "fire",
+            "flying"
+        ],
+        "weight": 905
+    },
+    {
+        "name": "squirtle",
+        "height": 5,
+        "id": 7,
+        "types": [
+            "water"
+        ],
+        "weight": 90
+    },
+    {
+        "name": "wartortle",
+        "height": 10,
+        "id": 8,
+        "types": [
+            "water"
+        ],
+        "weight": 225
+    },
+    {
+        "name": "blastoise",
+        "height": 16,
+        "id": 9,
+        "types": [
+            "water"
+        ],
+        "weight": 855
+    },
+    {
+        "name": "caterpie",
+        "height": 3,
+        "id": 10,
+        "types": [
+            "bug"
+        ],
+        "weight": 29
+    },
+    {
+        "name": "metapod",
+        "height": 7,
+        "id": 11,
+        "types": [
+            "bug"
+        ],
+        "weight": 99
+    },
+    {
+        "name": "butterfree",
+        "height": 11,
+        "id": 12,
+        "types": [
+            "bug",
+            "flying"
+        ],
+        "weight": 320
+    },
+    {
+        "name": "weedle",
+        "height": 3,
+        "id": 13,
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "weight": 32
+    },
+    {
+        "name": "kakuna",
+        "height": 6,
+        "id": 14,
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "weight": 100
+    },
+    {
+        "name": "beedrill",
+        "height": 10,
+        "id": 15,
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "weight": 295
+    },
+    {
+        "name": "pidgey",
+        "height": 3,
+        "id": 16,
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "weight": 18
+    },
+    {
+        "name": "pidgeotto",
+        "height": 11,
+        "id": 17,
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "weight": 300
+    },
+    {
+        "name": "pidgeot",
+        "height": 15,
+        "id": 18,
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "weight": 395
+    },
+    {
+        "name": "rattata",
+        "height": 3,
+        "id": 19,
+        "types": [
+            "normal"
+        ],
+        "weight": 35
+    },
+    {
+        "name": "raticate",
+        "height": 7,
+        "id": 20,
+        "types": [
+            "normal"
+        ],
+        "weight": 185
+    },
+    {
+        "name": "ditto2",
+        "height": 7,
+        "id": 22,
+        "types": [
+            "normal"
+        ],
+        "weight": 69
+    }
 ]
