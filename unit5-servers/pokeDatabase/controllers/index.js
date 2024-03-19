@@ -52,4 +52,25 @@ router.delete("/:name", (request, response) => {
 	}
 });
 
+router.post("/:name", (request, response) => {
+	// get the pokemon we are trying to change
+	const requestedPokeIndex = pokemon.findIndex((ele) => {
+		return ele.name == request.params.name;
+	});
+	// access height of pokemon
+	// use index to access pokemon from array
+	// console.log(pokemon[requestedPokeIndex].height)
+
+	// change height of pokemon
+	console.log(request.body)
+	// pokemon[requestedPokeIndex].height = request.params.height;
+	// pokemon[requestedPokeIndex].weight = request.params.weight;
+
+	// write it to a file
+	writeFile("./pokemon.json", JSON.stringify(pokemon, null, 4), () => {
+		response.send("Pokemon was changed!");
+	});
+});
+
+
 export default router;
