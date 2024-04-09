@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.js";
 
+//TODO: error handling for if JWT is invalid or user does not exist
 export default async function validationMiddleware(request, response, next) {
 	//decrypt JWT
 	const decryptedToken = jwt.verify(request.headers.authorization, process.env.SECRET_KEY);

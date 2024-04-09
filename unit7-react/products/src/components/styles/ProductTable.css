@@ -1,0 +1,8 @@
+.ProductTableHeaders {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.ProductTableHeaders > h2 {
+	margin: 0;
+}

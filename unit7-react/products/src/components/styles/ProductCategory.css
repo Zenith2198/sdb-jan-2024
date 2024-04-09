@@ -1,0 +1,19 @@
+.ProductCategory > h2 {
+	margin: 0;
+	border-bottom: 2px solid lightblue;
+}
+
+.ProductCategoryProds {
+	margin: 0 15px;
+}
+
+.ProductCategoryProdRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: start;
+	gap: 15px;
+}
+
+.ProductCategoryNotStocked {
+	color: red;
+}

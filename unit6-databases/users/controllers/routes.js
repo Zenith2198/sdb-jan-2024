@@ -1,5 +1,6 @@
 import { Router } from "express";
 import User from "../models/user.js";
+import Post from "../models/post.js";
 import { hash } from "bcrypt";
 import jwt from "jsonwebtoken";
 import validationMiddleware from "../middleware/validationMiddleware.js";
@@ -34,7 +35,7 @@ router.post("/signup", async (request, response) => {
 					await user.save();
 
 					//sign in user
-					const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: 30*60 });
+					const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: 3*60*60 });
 
 					response.send({
 						message: "Success",
@@ -66,6 +67,27 @@ router.post("/user", validationMiddleware, (request, response) => {
 		})
 	}
 
+});
+
+//create new post
+router.post("/post", validationMiddleware, async (request, response) => {
+	try {
+		//TODO: check if middleware properly got request.user
+		//save post to database
+		const post = new Post({
+			...request.body,
+			userId: request.user._id
+		});
+		await post.save();
+
+		response.send({
+			message: "Post was successfully uploaded"
+		});
+	} catch (e) {
+		response.status(500).send({
+			message: e.message
+		});
+	}
 });
 
 export default router;

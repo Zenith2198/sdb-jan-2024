@@ -1,0 +1,13 @@
+.Nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.NavCheckboxContainer {
+	display: flex;
+	margin: 5px 0;
+}
+
+.NavCheckboxContainer > p {
+	margin: 0;
+}
