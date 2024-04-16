@@ -1,7 +1,6 @@
 import { Router } from "express";
 import User from "../models/user.js";
 import Post from "../models/post.js";
-import { hash } from "bcrypt";
 import jwt from "jsonwebtoken";
 import validationMiddleware from "../middleware/validationMiddleware.js";
 
@@ -9,7 +8,7 @@ const router = Router();
 
 //landing page
 router.get("/", (request, response) => {
-	response.send("Hi"); //TODO: change to sending JSON
+	response.send({ message: "Hello React!" });
 });
 
 //add user to database
@@ -21,34 +20,31 @@ router.post("/signup", async (request, response) => {
 		});
 
 		if (doesUserExist === null) {
-			//hash password
-			//NOTE: this should be done client side, not server side
-			hash(request.body.password, 10, async (err, passwordHash) => {
-				if (err) {
-					response.send(err);
-				} else {
-					//save user to database
-					const user = new User({
-						username: request.body.username,
-						passwordHash
-					});
-					await user.save();
+			//save user to database
+			const user = new User({
+				username: request.body.username,
+				passwordHash: request.body.passwordHash
+			});
+			await user.save();
 
-					//sign in user
-					const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: 3*60*60 });
+			//sign in user
+			const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
 
-					response.send({
-						message: "Success",
-						token
-					});
-				}
+			response.send({
+				message: "Success",
+				token
 			});
 		} else {
-			response.send("Username was already taken"); //TODO: change to sending error code with JSON
+			response.status(500).send({
+				message: "Username was already taken"
+			});
 		}
 
 	} catch (e) {
-		response.send(e.message); //TODO: change to sending error code with JSON
+		console.log(e)
+		response.status(500).send({
+			message: e.message
+		});
 	}
 });
 
