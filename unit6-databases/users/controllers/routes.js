@@ -3,6 +3,7 @@ import User from "../models/user.js";
 import Post from "../models/post.js";
 import jwt from "jsonwebtoken";
 import validationMiddleware from "../middleware/validationMiddleware.js";
+import { compare } from "bcrypt";
 
 const router = Router();
 
@@ -48,9 +49,30 @@ router.post("/signup", async (request, response) => {
 	}
 });
 
+//sign in user
+router.post("/signin", async (request, response) => {
+	const user = await User.findOne({
+		username: request.body.username
+	});
+
+	//check if username and password (INSECURE!!!) is valid
+	if (user && await compare(request.body.password, user.passwordHash)) {
+		//sign in user
+		const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY);
+
+		response.send({
+			message: "Success",
+			token
+		});
+	} else {
+		response.status(401).send({
+			message: "Invalid username or password"
+		});
+	}
+});
+
 //verify user token
 router.post("/user", validationMiddleware, (request, response) => {
-	console.log(request.user);
 	if (request.user) {
 		response.send({
 			message: "User is logged in",

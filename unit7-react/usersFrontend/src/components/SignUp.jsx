@@ -2,7 +2,7 @@ import "./styles/SignUp.css";
 import { useState } from "react";
 import { hash } from "bcryptjs";
 
-export default function SignUp() {
+export default function SignUp({ setToken }) {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -25,12 +25,13 @@ export default function SignUp() {
 					})
 				});
 
+				const body = await response.json();
 				if (response.status === 200) {
-					const body = await response.json();
 					//save jwt to local storage
 					localStorage.setItem("jwt-token", body.token);
+					setToken(body.token);
 				} else {
-					console.log(response);
+					console.log(body.message);
 				}
 			}
 		});
